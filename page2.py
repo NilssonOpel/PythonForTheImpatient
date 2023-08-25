@@ -1,6 +1,6 @@
 # Complex built-in types
 # list is an array
-# dictionaries are like Perl's hash
+# dictionaries are like Perl's hash (or Ruby's Hash)
 # Then there are sets, tuples etc that we ignore for now
 
 # lists
@@ -55,4 +55,32 @@ print(test)
 print(my_dict['Italy'])
 
 
+# More built-in function:
+# len(s)
+# Return the length (the number of items) of an object. The argument
+# may be a sequence (such as a string, bytes, tuple, list, or range)
+# or a collection (such as a dictionary, set, or frozen set).
+#
+# str()
+# Return a string version of object.
+#
+print(str(my_dict) + ' has ', end = '')
+print(len(my_dict), end = '')
+print(' items')
 
+print()     # insert a newline
+# Or if you print it as an object, print will use str(object)
+# To print the same as above
+print(my_dict, 'has',len(my_dict), 'items', sep=' ')
+
+# repr()
+# Return a string containing a printable representation of an object
+print('\nPrinted as repr(): ' + repr(my_list))
+
+
+# int(x, base=10)
+# Return an integer object constructed from a number or string x
+a_value_as_a_string = "4711"
+print(int(a_value_as_a_string))
+print(repr(a_value_as_a_string))        # A string
+print(repr(int(a_value_as_a_string)))   # A number
